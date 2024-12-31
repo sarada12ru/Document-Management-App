@@ -3,7 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NgxBootstrapModule } from './ngx-bootstrap/ngx-bootstrap.module';
+import { NgxBootstrapModule } from './shared/ngx-bootstrap/ngx-bootstrap.module';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { NgxBootstrapModule } from './ngx-bootstrap/ngx-bootstrap.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgxBootstrapModule
+    NgxBootstrapModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

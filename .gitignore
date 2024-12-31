@@ -42,3 +42,5 @@ testem.log
 Thumbs.db
 
 .vscode/*
+server/node_modules
+server/package-lock.json
