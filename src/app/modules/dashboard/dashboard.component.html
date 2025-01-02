@@ -1,1 +1,12 @@
-<p>dashboard works!</p>
+<div class="d-flex height-5 align-items-center">
+    <h3>Document Management System</h3>
+    <div class="ms-auto">
+        <button class="btn btn-secondary mx-1 nav-items" [routerLink]="['/users']">Users</button>
+        <button class="btn btn-secondary mx-1 nav-items" [routerLink]="['/docs']">Docs</button>
+        <button class="btn btn-secondary mx-1 nav-items" [routerLink]="['/docs']">{{user.name}} <i class="bi bi-person"></i></button>
+        <button class="btn btn-secondary mx-1 nav-items" [routerLink]="['/docs']"><i class="bi bi-power"></i></button>
+    </div>
+</div>
+<div class="card p-2 m-2">
+    <router-outlet></router-outlet>
+</div>

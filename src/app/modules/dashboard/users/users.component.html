@@ -1,1 +1,31 @@
-<p>users works!</p>
+<div class="d-grid">
+    <div class="d-flex justify-content-between">
+        <h3><i class="bi bi-people mx-2"></i>Users</h3>
+        <button class="btn btn-secondary" (click)="AddUser()"><i class="bi bi-person-add mx-2"></i>Add</button>
+    </div>
+    <hr>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users; index as i">
+                <th scope="row">{{i+1}}</th>
+                <td>{{user.name}}</td>
+                <td>{{user.email}}</td>
+                <td>
+                    <div class="d-flex justify-content-start align-items-center">
+                        <button class="btn btn-danger mx-1">Disable</button>
+                        <button class="btn btn-danger mx-1">Disable</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

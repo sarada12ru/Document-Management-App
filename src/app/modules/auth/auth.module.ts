@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { AuthRoutingModule } from './auth-routing.module';
 import { SignInComponent } from './sign-in/sign-in.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgxBootstrapModule } from 'src/app/shared/ngx-bootstrap/ngx-bootstrap.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +12,10 @@ import { SignInComponent } from './sign-in/sign-in.component';
   ],
   imports: [
     CommonModule,
-    AuthRoutingModule
+    AuthRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgxBootstrapModule
   ]
 })
 export class AuthModule { }

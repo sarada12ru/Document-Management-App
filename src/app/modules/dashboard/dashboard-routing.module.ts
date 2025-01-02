@@ -5,11 +5,15 @@ import { DashboardComponent } from './dashboard.component';
 const routes: Routes = [
   {
     path: '',
-    component: DashboardComponent
-  },
-  {
-    path: 'users',
-    loadChildren: () => import('./users/users.module').then(m => m.UsersModule)
+    component: DashboardComponent,
+    children: [
+      {
+        path: 'users', loadChildren: () => import('./users/users.module').then(m => m.UsersModule)
+      },
+      {
+        path: 'docs', loadChildren: () => import('./docs/docs.module').then(m => m.DocsModule)
+      }
+    ]
   }
 ];
 
