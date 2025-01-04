@@ -3,18 +3,24 @@
         "id": 1,
         "name": "Sarada",
         "email": "sarada12ru@gmail.com",
-        "password": "sarada.1234"
+        "password": "sarada.1234",
+        "active": true,        
+        "deleted": 0
     },
     {
         "id": 2,
         "name": "Sumit",
         "email": "sumitkumardash1999@gmail.com",
-        "password": "sumit.1234"
+        "password": "sumit.1234",
+        "active": true,        
+        "deleted": 0
     },
     {
         "id": 3,
         "name": "Satya",
         "email": "satya.n7@gmail.com",
-        "password": "satya.1234"
+        "password": "satya.1234",
+        "active": true,        
+        "deleted": 0
     }
 ]
