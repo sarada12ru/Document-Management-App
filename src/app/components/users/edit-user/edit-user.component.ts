@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { BsModalRef } from 'ngx-bootstrap/modal';
+import { User } from 'src/app/interfaces/user.interface';
 
 @Component({
   selector: 'app-edit-user',
@@ -12,7 +14,11 @@ export class EditUserComponent {
     email: new FormControl('', [Validators.required])
   })
 
-  constructor() {}
+  @Input() data: User | undefined;
+  
+  constructor(public bsModalRef: BsModalRef) {
+    console.log(this.data);
+  }
 
   updateUser() {
     console.log(this.editUserForm.value)

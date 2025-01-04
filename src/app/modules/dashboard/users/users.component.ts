@@ -33,7 +33,7 @@ export class UsersComponent implements OnInit{
     })
   }
 
-  AddUser() {
+  addUser() {
     const initialState: ModalOptions = {
       initialState: {
         list: ['Open a modal with component', 'Pass your data', 'Do something else', '...'],
@@ -43,4 +43,17 @@ export class UsersComponent implements OnInit{
     this.bsModalRef = this.modalService.show(EditUserComponent, initialState);
     this.bsModalRef.content.closeBtnName = 'Close';
   }
+
+  editUser(user: User) {
+    const initialState: ModalOptions = {
+      initialState: {
+        list: ['Open a modal with component', 'Pass your data', 'Do something else', '...'],
+        title: 'Modal with component',
+        data: user
+      }
+    };
+    this.bsModalRef = this.modalService.show(EditUserComponent, initialState);
+    this.bsModalRef.content.user = user;
+  }
+
 }
